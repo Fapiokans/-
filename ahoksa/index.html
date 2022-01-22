@@ -22,7 +22,9 @@
 </head>
 <body>
   <input type="file" onchange="fileChanged(this)" accept="image/*">
-  <video src="meme.mp4" style="display:none" id="endv"></video>
+  <video style="display:none" id="endv">
+    <source src="meme.mp4">
+  </video>
   <canvas id="my"></canvas>
 </body>
 </html>
