@@ -1,4 +1,6 @@
-let = i;
+let i;
+let end = 0;
+document.getElementById("endv").load()
 function init() {
   //レンダラー
   const width = window.innerWidth;
@@ -43,6 +45,11 @@ function init() {
   //ループ
   tick();
   function tick() {
+    end++;
+    if(end==500){
+      document.getElementById("endv").style.display = "block";
+      document.getElementById("endv").play()
+    }
     box.rotation.y += 0.01;
     img.position.x += 0.4;
     img.position.y += 0.4;
@@ -56,6 +63,7 @@ function fileChanged(input) {
   let reader = new FileReader();
   reader.onload = (function() {
     i = reader.result;
+    document.getElementById("endv").style.display = "none";
     init()
   })
   reader.readAsDataURL(input.files[0]);

@@ -3,18 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>game</title>
+  <title>迫真地球追放</title>
   <style>
     body {
       margin: 0;
       overflow: hidden;
+    }
+    video {
+      position: absolute;
+      top:30%;
+      left:0;
+      width:100%;
+      height:auto;
     }
   </style>
   <script src="https://cdn.discordapp.com/attachments/913725744134357033/914417618323128340/three.js"></script>
   <script src="game.js"></script>
 </head>
 <body>
-  <input type="file" onchange="fileChanged(this)">
+  <input type="file" onchange="fileChanged(this)" accept="image/*">
+  <video src="https://media.discordapp.net/attachments/849003445130362890/934428099972591646/meme.mp4" style="display:none" id="endv"></video>
   <canvas id="my"></canvas>
 </body>
 </html>
